@@ -12,6 +12,7 @@ namespace GameEngine
 		{
 			None = -1,
 			Player = 0,
+			Obstacle,
 			Tileset,
 			BG,
 			Particles,
@@ -25,6 +26,7 @@ namespace GameEngine
 		{
 		case eTexture::Player:    return "player.png";
 		case eTexture::Tileset:   return "tileset.png";
+		case eTexture::Obstacle:   return "tileset.png";
 		case eTexture::BG:		  return "bg.png";
 		case eTexture::Particles: return "particles.png";
 		default:       return "UnknownTexType";

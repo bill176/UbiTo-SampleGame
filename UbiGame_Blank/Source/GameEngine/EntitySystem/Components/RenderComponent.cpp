@@ -35,7 +35,7 @@ void RenderComponent::Render(sf::RenderTarget* target)
 		return;
 	}
 
-	static bool drawDebug = false;
+	static bool drawDebug = true;
 	//Debug draw of bounding boxes
 	if (drawDebug)
 	{
@@ -66,7 +66,7 @@ void RenderComponent::Render(sf::RenderTarget* target)
 
 		//Debug draw of entity pos
 
-		sf::RectangleShape shape(sf::Vector2f(5.f, 5.f));
+		sf::RectangleShape shape(GetEntity()->GetSize());
 		sf::Vector2f pos = GetEntity()->GetPos();
 		pos -= shape.getSize() / 2.f;
 		shape.setFillColor(m_fillColor);

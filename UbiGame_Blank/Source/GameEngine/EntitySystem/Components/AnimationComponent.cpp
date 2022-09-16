@@ -55,9 +55,12 @@ void AnimationComponent::Update()
 	if (m_currentFrameDT > dt_perFrame)
 	{
 		m_currentFrameDT = m_currentFrameDT - dt_perFrame;
-		m_currentFrame++;		
+		m_currentFrame++;
 		if (m_currentFrame >= currDefinition->m_frameCount)
+		{
 			m_currentFrame = 0;
+			m_currentAnim = EAnimationId::None;
+		}
 	}
 }
 
